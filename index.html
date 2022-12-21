@@ -230,7 +230,9 @@
             }
             eleArray.push(new enemy(x, y, radius, color, velocity))
             if (i % 10 == 0) {
-                time -= 500
+                if (time != 500) {
+                    time -= 500
+                }
                 clearInterval(setTime)
                 setTime = setInterval(en, time)
             } else if (time == 0) {
